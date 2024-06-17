@@ -1,0 +1,74 @@
+
+@use '/src/scss/colors';
+
+.layout {
+  display: flex;
+}
+
+.content {
+  flex: 1;  
+  height: 100vh;
+  overflow: auto;
+  background-color: colors.$page-background;
+  position: relative;
+}
+
+.tabsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #E5E9EB;
+
+
+  .leftSide {
+    // max-width: ;
+    // background-color: red;
+    flex: 1;
+    display: flex;
+    overflow: auto;
+  }
+
+  .rightSide {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tabComponent {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    padding: 7px;
+    cursor: pointer;
+    border-right: 1px solid #E5E9EB;
+    color: colors.$grey;
+    height: 49px;
+
+
+    &.addButton {
+      border: none;
+    }
+
+    &.active {
+      background: #F6F8F9;
+      color: colors.$primary;
+    }
+
+    &:hover {
+      background: #F6F8F9;
+      // border-bottom: 1px solid #E5E9EB;
+    }
+
+    .tabIcon {
+      margin-right: 4px;
+    }
+
+    .title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
